@@ -164,7 +164,7 @@ def main(argv):
     if(len(args) < 2 and len(args) >0):
         inputfile = args[0]
     elif(len(args) > 2):
-        print("Unrecognised arguments")
+        print("Unrecognised arguments.")
         usage()
         sys.exit(3)
         
@@ -173,7 +173,7 @@ def main(argv):
             mp3carrier.update_playlist(playlist, inputfile, destdir)
             mp3carrier.move_file(inputfile, destdir)
         else:
-            raise Exception("Not supported playlist")
+            raise Exception("Not supported playlist.")
     else:
         if mp3carrier.check_playlist_supported(playlist):
             if os.path.isfile(inputlist):
@@ -187,9 +187,9 @@ def main(argv):
                 finally:
                     listfile.close()
             else:
-                raise Exception("Invalid file list")
+                raise Exception("Invalid file list.")
         else:
-            raise Exception("Not supported playlist")
+            raise Exception("Not supported playlist.")
     
     sys.exit(0)
         
